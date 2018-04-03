@@ -7,6 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { ExampleComponent } from './components/example/example.component';
 import { CliexamplesComponent } from './components/cliexamples/cliexamples.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CliexamplesComponent } from './components/cliexamples/cliexamples.compo
         UsersComponent,
         ExampleComponent,
         CliexamplesComponent,
+        NavbarComponent,
     ],
     imports: [
         BrowserModule
