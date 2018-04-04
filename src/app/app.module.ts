@@ -9,6 +9,9 @@ import { UsersTestComponent } from './components/userstest/userstest.component';
 import { ExampleComponent } from './components/example/example.component';
 import { CliexamplesComponent } from './components/cliexamples/cliexamples.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DataService } from './services/data.service';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostsService } from './services/posts.service';
 
 @NgModule({
     declarations: [
@@ -19,12 +22,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         ExampleComponent,
         CliexamplesComponent,
         NavbarComponent,
+        PostsComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule
     ],
-    providers: [],
+    providers: [DataService, PostsService],
     bootstrap: [AppComponent]
 })
 
