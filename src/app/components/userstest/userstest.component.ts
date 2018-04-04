@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../../models/User';
+import { UserTest } from '../../models/UserTest';
 
 @Component({
-    selector: 'app-users',
-    templateUrl: './users.component.html',
-    styleUrls: ['./users.component.css']
+    selector: 'app-userstest',
+    templateUrl: './userstest.component.html',
+    styleUrls: ['./userstest.component.css']
 })
-export class UsersComponent implements OnInit {
-    users: User[];
+
+export class UsersTestComponent implements OnInit {
+    users: UserTest[];
     showExtended: boolean = true;
     loaded: boolean = false;
     enableAdd: boolean = true;
+    currentClasses = {};
+    currentStyles = {};
 
     constructor() { }
 
@@ -26,8 +29,8 @@ export class UsersComponent implements OnInit {
                     city: 'Boston',
                     state: 'MA'
                 },
-                isActive: true,
-                registered: new Date('01/02/2018 08:30:00')
+                image: '../../assets/images/img1.jpg',
+                isActive: true
             },
             {
                 firstName: 'Kevin',
@@ -38,8 +41,8 @@ export class UsersComponent implements OnInit {
                     city: 'Lynn',
                     state: 'MA'
                 },
-                isActive: false,
-                registered: new Date('03/11/2017 06:20:00')
+                image: '../../assets/images/img2.jpg',
+                isActive: false
             },
             {
                 firstName: 'Karen',
@@ -50,16 +53,37 @@ export class UsersComponent implements OnInit {
                     city: 'Miami',
                     state: 'FL'
                 },
-                isActive: true,
-                registered: new Date('11/02/2016 10:30:00')
+                image: '../../assets/images/img3.jpg',
+                isActive: true
             }
         ];
 
         this.loaded = true;
+
+        // this.addUser({
+        //   firstName: 'David',
+        //   lastName: 'Jackson'
+        // });
+
+        this.setCurrentClasses();
+        this.setCurrentStyles();
     }
 
-    addUser(user: User) {
+    addUser(user: UserTest) {
         this.users.push(user);
     }
 
+    setCurrentClasses() {
+        this.currentClasses = {
+            'btn-success': this.enableAdd,
+            'big-text': this.showExtended
+        }
+    }
+
+    setCurrentStyles() {
+        this.currentStyles = {
+            'padding-top': this.showExtended ? '0' : '40px',
+            'font-size': this.showExtended ? '' : '40px'
+        }
+    }
 }

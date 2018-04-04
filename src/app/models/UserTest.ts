@@ -1,4 +1,4 @@
-export interface User {
+export interface UserTest {
     firstName: string,
     lastName: string,
     age?: number,
@@ -7,6 +7,6 @@ export interface User {
         city?: string,
         state?: string
     },
-    isActive?: boolean,
-    registered?: any
+    image?: string,
+    isActive?: boolean
 }
