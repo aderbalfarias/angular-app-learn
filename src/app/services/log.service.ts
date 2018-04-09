@@ -30,6 +30,8 @@ export class LogService {
 
     addLog(log: Log) {
         this.logs.unshift(log);
+
+        
     }
 
     updateLog(log: Log) {

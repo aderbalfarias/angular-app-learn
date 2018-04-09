@@ -1,6 +1,7 @@
+<app-log-form></app-log-form>
 <ul class="list-group" *ngIf="loaded && logs.length > 0">
     <li *ngFor="let log of logs" [class.list-group-item-secondary]="selectedLog === log" class="list-group-item d-flex justify-content-between align-items-center">
-        <a (click)="onSelect(log)" href="#">{{ log.text }}</a>
+        <a (click)="onSelect(log)" routerLink="/logs">{{ log.text }}</a>
         <span class="log-date">{{ log.date | date: 'short'}}</span>
         <i (click)="onDelete(log)" class="fa fa-remove"></i>
     </li>
