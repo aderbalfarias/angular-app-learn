@@ -18,6 +18,9 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LogFormComponent } from './components/log-form/log-form.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { LogService } from './services/log.service';
 
 @NgModule({
     declarations: [
@@ -32,7 +35,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
         PostFormComponent,
         HomeComponent,
         PostComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        LogFormComponent,
+        LogsComponent
     ],
     imports: [
         BrowserModule,
@@ -40,7 +45,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
         HttpClientModule,
         AppRoutingModule
     ],
-    providers: [UserService, PostService],
+    providers: [UserService, PostService, LogService],
     bootstrap: [AppComponent]
 })
 
