@@ -6,11 +6,11 @@ import { Post } from '../models/Post';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-}
+};
 
 @Injectable()
 export class PostService {
-    postsUrl: string = 'https://jsonplaceholder.typicode.com/posts';
+    postsUrl: 'https://jsonplaceholder.typicode.com/posts';
 
     constructor(private http: HttpClient) { }
 

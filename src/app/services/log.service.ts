@@ -26,9 +26,9 @@ export class LogService {
         } else {
             this.logs = JSON.parse(localStorage.getItem('logs'));
         }
-        
-        return of(this.logs.sort((x, y) => { 
-            return y.date = x.date 
+
+        return of(this.logs.sort((x, y) => {
+            return y.date = x.date;
         }));
     }
 
@@ -39,7 +39,7 @@ export class LogService {
     addLog(log: Log) {
         this.logs.unshift(log);
 
-        localStorage.setItem('logs', JSON.stringify(this.logs))
+        localStorage.setItem('logs', JSON.stringify(this.logs));
     }
 
     updateLog(log: Log) {
@@ -48,10 +48,10 @@ export class LogService {
                 this.logs.splice(index, 1);
             }
         });
-        
+
         this.logs.unshift(log);
 
-        localStorage.setItem('logs', JSON.stringify(this.logs))
+        localStorage.setItem('logs', JSON.stringify(this.logs));
     }
 
     deleteLog(log: Log) {
@@ -61,7 +61,7 @@ export class LogService {
             }
         });
 
-        localStorage.setItem('logs', JSON.stringify(this.logs))
+        localStorage.setItem('logs', JSON.stringify(this.logs));
     }
 
     clearState() {
