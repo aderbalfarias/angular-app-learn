@@ -12,7 +12,7 @@ import { Log } from '../../models/Log';
 export class LogsComponent implements OnInit {
     logs: Log[];
     selectedLog: Log;
-    loaded: boolean = false;
+    loaded = false;
 
     constructor(private logService: LogService) { }
 

@@ -34,7 +34,7 @@ export class ExampleComponent {
             street: '50 Main st',
             city: 'Boston',
             state: 'MA'
-        }
+        };
 
         this.foo = true;
         this.hasKids = true;
